@@ -47,9 +47,9 @@ export const metadata: Metadata = {
         alt: "ASAP - Crypto and Everyday Money Bridge",
       },
       {
-        url: "/logo/logo-full.png",
-        width: 200,
-        height: 60,
+        url: "/open-graph-seo.png",
+        width: 100,
+        height: 100,
         alt: "ASAP Logo",
       },
     ],
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "ASAP - Bridge Between Crypto and Everyday Money",
     description:
       "Empower your business with crypto payments and manage your crypto like everyday money. Join ASAP today.",
-    images: ["/hero.png"],
+    images: ["/open-graph-seo.png"],
     creator: "@asap_platform", // Replace with your actual Twitter handle
     site: "@asap_platform", // Replace with your actual Twitter handle
   },
