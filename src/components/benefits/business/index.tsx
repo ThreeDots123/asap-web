@@ -13,7 +13,7 @@ const businessBenefits = [
 export default function BusinessBenefits() {
   return (
     <section
-      className="relative w-full bg-foreground pt-6 pb-16 lg:pb-32"
+      className="relative w-full bg-foreground pt-6 pb-16 lg:pb-32 overflow-hidden"
       id="asap-business"
     >
       <Image
@@ -43,10 +43,11 @@ export default function BusinessBenefits() {
                 </h2>
               </div>
               <p className="lg:text-[#3D3D3D] text-white text-sm mt-8">
-                ASAP B2B is a plug-and-play SDK that lets your business accept
-                crypto payments without dealing with volatility, compliance, or
-                wallet management. You get instant fiat or stablecoin
-                settlements, while we handle the hard stuff in the background.
+                ASAP B2B gives your business two powerful ways to collect crypto
+                payments; in-store with POS or in-app with our plug-and-play
+                SDK. Your customers pay in stablecoins, and you get instant fiat
+                or stablecoin settlements without worrying about volatility,
+                wallets, or compliance. We handle everything in the background.
               </p>
 
               <div className="mt-10 gap-3 space-y-1.5 lg:-ml-5.5">
@@ -66,10 +67,10 @@ export default function BusinessBenefits() {
 
         <Image
           src="/asap-business.png"
-          width={1440}
-          height={960}
+          width={150}
+          height={350}
           alt="Asap-admin"
-          className="lg:absolute lg:w-[700px] lg:h-[400px] w-auto z-2 -bottom-14 right-0 shadow-2xl"
+          className="lg:absolute lg:w-[300px] lg:h-[500px] w-auto z-2 -bottom-34 right-30 mx-auto"
         />
 
         <div className="sm:flex items-center gap-3">
