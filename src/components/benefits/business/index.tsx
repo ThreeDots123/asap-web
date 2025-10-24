@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeCheckIcon } from "lucide-react";
+import { ArrowDown, ArrowRight, BadgeCheckIcon } from "lucide-react";
 import { Button } from "../../ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -72,12 +72,21 @@ export default function BusinessBenefits() {
           className="lg:absolute lg:w-[700px] lg:h-[400px] w-auto z-2 -bottom-14 right-0 shadow-2xl"
         />
 
-        <Link href="https://merchant.asapcrypto.xyz" className="block">
-          <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer">
-            Integrate with ASAP Business
-            <ArrowRight />
-          </Button>
-        </Link>
+        <div className="sm:flex items-center gap-3">
+          <Link href="https://merchant.asapcrypto.xyz" className="block">
+            <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer">
+              Integrate with ASAP Business
+              <ArrowRight />
+            </Button>
+          </Link>
+
+          <Link href="/app-release.apk" className="block">
+            <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer">
+              Download the POS App
+              <ArrowDown />
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
