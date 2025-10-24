@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ApplicationHero() {
   return (
@@ -22,9 +23,11 @@ export default function ApplicationHero() {
         </p>
 
         <div className="md:mx-auto w-fit mt-5 flex gap-3">
-          <Button className="flex gap-2 bg-primary-light !px-4 cursor-pointer text-sm">
-            For Business <ArrowRight />
-          </Button>
+          <Link href="#asap-business" className="block">
+            <Button className="flex gap-2 bg-primary-light !px-4 cursor-pointer text-sm">
+              For Business <ArrowRight />
+            </Button>
+          </Link>
           <Button
             variant="outline"
             className="flex gap-2 border-accent !px-4 cursor-pointer text-accent text-sm"

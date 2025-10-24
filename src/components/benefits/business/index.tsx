@@ -1,6 +1,7 @@
 import { ArrowRight, BadgeCheckIcon } from "lucide-react";
 import { Button } from "../../ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const businessBenefits = [
   "Seamless checkout integrations",
@@ -11,7 +12,10 @@ const businessBenefits = [
 
 export default function BusinessBenefits() {
   return (
-    <section className="relative w-full bg-foreground pt-6 pb-16 lg:pb-32">
+    <section
+      className="relative w-full bg-foreground pt-6 pb-16 lg:pb-32"
+      id="asap-business"
+    >
       <Image
         src="/business-benefit.png"
         width={1088}
@@ -68,10 +72,12 @@ export default function BusinessBenefits() {
           className="lg:absolute lg:w-[700px] lg:h-[400px] w-auto z-2 -bottom-14 right-0 shadow-2xl"
         />
 
-        <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer">
-          Integrate with ASAP Business
-          <ArrowRight />
-        </Button>
+        <Link href="https://merchant.asapcrypto.xyz" className="block">
+          <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer">
+            Integrate with ASAP Business
+            <ArrowRight />
+          </Button>
+        </Link>
       </div>
     </section>
   );
