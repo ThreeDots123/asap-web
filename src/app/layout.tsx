@@ -73,6 +73,7 @@ export const metadata: Metadata = {
     yandex: "your-yandex-verification-code", // Replace with your actual Yandex verification code
     yahoo: "your-yahoo-verification-code", // Replace with your actual Yahoo verification code
   },
+  other: { "facebook-domain-verification": "4c9n8r63pmurky7sh8dkmb9vxv5jzm" },
   category: "Financial Services",
   classification: "Cryptocurrency Payment Platform",
 };
