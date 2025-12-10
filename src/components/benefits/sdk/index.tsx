@@ -1,20 +1,23 @@
+"use client"
+
 import { ArrowDown, ArrowRight, BadgeCheckIcon } from "lucide-react";
 import { Button } from "../../ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 const businessBenefits = [
   "Seamless checkout integrations",
-  "Payouts directly to your bank or mobile money",
+  "Payouts directly to your bank account",
   "Compliance (KYC/AML/reporting) done by ASAP",
   "Future-ready with stablecoin settlements",
 ];
 
-export default function BusinessBenefits() {
+export default function SDKBenefits() {
   return (
     <section
       className="relative w-full bg-foreground pt-6 pb-16 lg:pb-32 overflow-hidden"
-      id="asap-business"
+      id="asap-sdk"
     >
       <Image
         src="/business-benefit.png"
@@ -25,8 +28,8 @@ export default function BusinessBenefits() {
       />
       <div className="layout-container py-10 relative z-1">
         <div className="text-primary-light flex items-center gap-2">
-          <BusinessIcon />
-          <h5 className="text-xs">ASAP BUSINESS</h5>
+          <WalletIcon />
+          <h5 className="text-xs">ASAP SDK & API</h5>
         </div>
 
         <div className="w-fit lg:bg-gradient-to-br lg:from-gray-200 lg:via-gray-100 lg:to-gray-200 rounded-lg flex items-center justify-center mt-3 lg:mt-10">
@@ -39,15 +42,17 @@ export default function BusinessBenefits() {
               <div className="mb-4 flex items-center gap-3">
                 {/* <div className="h-10 w-10 rounded-xl border border-white/30 bg-white/20 backdrop-blur-sm"></div> */}
                 <h2 className="text-4xl tracking-[-4%] font-bold lg:text-[#3D3D3D] uppercase font-heading">
-                  Accept crypto. Get paid in cash
+                  Crypto Payments, Seamlessly Coded. Integrate in Hours, Not Months.
                 </h2>
               </div>
               <p className="lg:text-[#3D3D3D] text-white text-sm mt-8">
-                ASAP B2B gives your business two powerful ways to collect crypto
-                payments; in-store with POS or in-app with our plug-and-play
-                SDK. Your customers pay in stablecoins, and you get instant fiat
-                or stablecoin settlements without worrying about volatility,
-                wallets, or compliance. We handle everything in the background.
+                Embed the future of payments directly into your website or app with our 
+                developer-first, plug-and-play SDK. Our elegantly designed components and powerful APIs 
+                provide a frictionless checkout experience that your customers will love, 
+                while giving you complete control over the user flow. 
+                We abstract away all the blockchain complexity, wallet connections, and regulatory hurdles. 
+                Your customers pay with their preferred stablecoin, and you receive automated, instant settlements to your bank. 
+                Built for scale, security, and simplicity.
               </p>
 
               <div className="mt-10 gap-3 space-y-1.5 lg:-ml-5.5">
@@ -66,27 +71,27 @@ export default function BusinessBenefits() {
         </div>
 
         <Image
-          src="/asap-business.png"
-          width={150}
-          height={350}
+          src="/asap-sdk.png"
+          width={350}
+          height={150}
           alt="Asap-admin"
-          className="lg:absolute lg:w-[300px] lg:h-[500px] w-auto z-2 -bottom-34 right-30 mx-auto"
+          className="lg:absolute lg:w-[550px] lg:h-[300px] w-auto z-2 -bottom-0 right-30 mx-auto"
         />
 
         <div className="sm:flex items-center gap-3">
-          <Link href="https://merchant.asapcrypto.xyz" className="block">
-            <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer">
-              Integrate with ASAP Business
+          {/* <Link href="https://merchant.asapcrypto.xyz" className="block"> */}
+            <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer" onClick={() => toast('Coming Soon!', {icon: '⌛️'})}>
+              Integrate the ASAP SDK
               <ArrowRight />
             </Button>
-          </Link>
+          {/* </Link> */}
 
-          <Link href="/app-release.apk" className="block">
+          {/* <Link href="/app-release.apk" className="block">
             <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer">
-              Download the POS App
+              Download the Machine POS App
               <ArrowDown />
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
@@ -120,7 +125,7 @@ const WalletIcon = () => (
       fillRule="evenodd"
       clipRule="evenodd"
       d="M2.94419 0.476578C2.16334 0.476578 1.41448 0.786768 0.862333 1.33891C0.310191 1.89105 0 2.63992 0 3.42077V13.0563C0 13.8371 0.310191 14.586 0.862333 15.1382C1.41448 15.6903 2.16334 16.0005 2.94419 16.0005H17.9328C18.7136 16.0005 19.4625 15.6903 20.0146 15.1382C20.5668 14.586 20.877 13.8371 20.877 13.0563V3.42077C20.877 2.63992 20.5668 1.89105 20.0146 1.33891C19.4625 0.786768 18.7136 0.476578 17.9328 0.476578H2.94419ZM15.2563 6.90026C14.9013 6.90026 14.5609 7.04126 14.31 7.29223C14.059 7.54321 13.918 7.8836 13.918 8.23853C13.918 8.59346 14.059 8.93386 14.31 9.18483C14.5609 9.4358 14.9013 9.5768 15.2563 9.5768C15.6112 9.5768 15.9516 9.4358 16.2026 9.18483C16.4535 8.93386 16.5945 8.59346 16.5945 8.23853C16.5945 7.8836 16.4535 7.54321 16.2026 7.29223C15.9516 7.04126 15.6112 6.90026 15.2563 6.90026Z"
-      className="fill-accent"
+      className="fill-primary-light"
     />
   </svg>
 );

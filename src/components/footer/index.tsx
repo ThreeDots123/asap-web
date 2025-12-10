@@ -1,36 +1,45 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
-import DiscordIcon from "./icons/discord";
 import TwitterIcon from "./icons/twitter";
 import TelegramIcon from "./icons/telegram";
 import LinkedIn from "./icons/linkedin";
 import { Input } from "../ui/input";
 import InstagramIcon from "./icons/instagram";
+import TikTokIcon from "./icons/tiktok";
+import toast from "react-hot-toast";
+import WhatsappIcon from "./icons/whatsapp";
+import { useState } from "react";
 
 const socialIcons = [
   {
-    url: "/discord",
-    Icon: DiscordIcon,
-  },
-  {
-    url: "/twitter",
+    url: "https://x.com/asapcrypto247?t=RNKTkEhX8G457mI2m1p3gg&s=09",
     Icon: TwitterIcon,
   },
   {
-    url: "/tg",
-    Icon: TelegramIcon,
+    url: "https://www.tiktok.com/@asapcrypto",
+    Icon: TikTokIcon,
   },
   {
-    url: "/linkedin",
-    Icon: LinkedIn,
+    url: "https://wa.me/message/C4RZJD25AQBCB1",
+    Icon: WhatsappIcon,
   },
-  {
-    url: "/ig",
-    Icon: InstagramIcon,
-  },
+  // {
+  //   url: "/linkedin",
+  //   Icon: LinkedIn,
+  // },
+  // {
+  //   url: "/ig",
+  //   Icon: InstagramIcon,
+  // },
 ];
 
 export default function ApplicationFooter() {
+  const [email, setEmail] = useState("");
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
   return (
     <section className="py-20">
       <div className="layout-container">
@@ -38,7 +47,7 @@ export default function ApplicationFooter() {
           <div className="grid sm:grid-cols-[3fr_1fr] items-center gap-y-7">
             <h4 className="font-semibold text-lg">
               Speak to our customer care @{" "}
-              <span className="text-primary">00234-9085200000</span>
+              <span className="text-primary">+234-915-198-4731</span>
             </h4>
 
             <div className="space-y-2">
@@ -46,7 +55,7 @@ export default function ApplicationFooter() {
               <ul className="text-muted-foreground mb-10 flex items-center gap-2">
                 {socialIcons.map(({ Icon, url }) => {
                   return (
-                    <a href="" key={url}>
+                    <a href={url} key={url} target="_blank">
                       <span className="bg-muted hover:text-accent flex size-10 items-center justify-center rounded-full transition-colors cursor-pointer">
                         <Icon />
                       </span>
@@ -82,7 +91,7 @@ export default function ApplicationFooter() {
                 <h4 className="font-medium mb-3 text-xl">Contact</h4>
                 <div className="text-muted-foreground text-sm space-y-3">
                   <p>328 Queensberry Street, G.R.A, Enugu.</p>
-                  <a href="to-support" className="text-blue-500 underline">
+                  <a href="mailto:support@asapcrypto.xyz" className="text-blue-500 underline">
                     support@asapcrypto.xyz
                   </a>
                 </div>
@@ -91,36 +100,39 @@ export default function ApplicationFooter() {
                 <div>
                   <h4 className="font-medium mb-3 text-xl">Company</h4>
                   <div className="text-sm space-y-3 text-muted-foreground">
-                    <Link className="block" href="1">
+                    <span className="block cursor-pointer" onClick={() => toast('Coming Soon!', {icon: '⌛️'})}>
                       About us
-                    </Link>
-                    <Link className="block" href="2">
+                    </span>
+                    <span className="block cursor-pointer" onClick={() => toast('Coming Soon!', {icon: '⌛️'})}>
                       Privacy policy
-                    </Link>
-                    <Link className="block" href="3">
+                    </span>
+                    <span className="block cursor-pointer" onClick={() => toast('Coming Soon!', {icon: '⌛️'})}>
                       Terms &amp; conditions
-                    </Link>
-                    <Link className="block" href="4">
+                    </span>
+                    <span className="block cursor-pointer" onClick={() => toast('Coming Soon!', {icon: '⌛️'})}>
                       Cookies policy
-                    </Link>
-                    <Link className="block" href="5">
+                    </span>
+                    <span className="block cursor-pointer" onClick={() => toast('Coming Soon!', {icon: '⌛️'})}>
                       Community
-                    </Link>
+                    </span>
                   </div>
                 </div>
 
                 <div>
                   <h4 className="font-medium mb-3 text-xl">Support</h4>
                   <div className="text-sm space-y-3 text-muted-foreground">
-                    <Link className="block" href="1">
+                    <span className="block cursor-pointer" onClick={() => toast('Coming Soon!', {icon: '⌛️'})}>
                       FAQ
-                    </Link>
-                    <Link className="block" href="2">
+                    </span>
+                    <span className="block cursor-pointer" onClick={() => 
+                      toast('📞 Speak to our customer care @ +234-915-198-4731\n\nOr\n\n📩 Send a mail to support@asapcrypto.xyz',
+                        {
+                          duration: 5000
+                        }
+                      )}
+                    >
                       Contact us
-                    </Link>
-                    <Link className="block" href="3">
-                      VIsa
-                    </Link>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -133,8 +145,17 @@ export default function ApplicationFooter() {
                     <Input
                       placeholder="Enter your email"
                       className="border-none focus-visible:ring-0 w-full placeholder:text-xs"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
-                    <button className="cursor-pointer text-primary font-medium">
+                    <button
+                      disabled={!email}
+                      className="cursor-pointer text-primary font-medium hover:text-primary-light"
+                      onClick={() => {
+                        emailRegex.test(email) ? toast.success('Subscribed successfully!') : toast.error('Invalid email address!');
+                        setEmail("");
+                      }}
+                    >
                       Send
                     </button>
                   </div>

@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,17 +23,19 @@ export default function ApplicationHero() {
         </p>
 
         <div className="md:mx-auto w-fit mt-5 flex gap-3">
-          <Link href="#asap-business" className="block">
+          <Link href="#asap-mobile-pos" className="block">
             <Button className="flex gap-2 bg-primary-light !px-4 cursor-pointer text-sm">
-              For Business <ArrowRight />
+              ASAP Mobile POS <ArrowDown />
             </Button>
           </Link>
-          <Button
-            variant="outline"
-            className="flex gap-2 border-accent !px-4 cursor-pointer text-accent text-sm"
-          >
-            For Individual <ArrowRight />
-          </Button>
+          <Link href="#asap-whatsapp" className="block">
+            <Button
+              variant="outline"
+              className="flex gap-2 border-accent !px-4 cursor-pointer text-accent text-sm"
+            >
+              ASAP WhatsApp <ArrowDown />
+            </Button>
+          </Link>
         </div>
 
         <div className="max-w-3xl max-h-64 mt-10 mx-auto">
@@ -48,7 +50,11 @@ export default function ApplicationHero() {
             Join thousands of businesses and individuals who are already using
             ASAP to make crypto as easy as traditional money.
           </p>
-          <Button className="bg-foreground text-white !px-7">Learn More</Button>
+          <Link href="#about" className="block">
+            <Button className="bg-foreground cursor-pointer text-white !px-7">
+              Learn More
+            </Button>
+          </Link>
         </div>
       </div>
 

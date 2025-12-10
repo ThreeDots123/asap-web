@@ -25,16 +25,12 @@ const navigationLinks = [
     url: "/",
   },
   {
-    name: "services",
-    url: "/services",
-  },
-  {
     name: "about us",
-    url: "/about",
+    url: "/#about",
   },
   {
-    name: "features",
-    url: "/features",
+    name: "products",
+    url: "/#asap-mobile-pos",
   },
 ];
 
@@ -102,7 +98,7 @@ export default function ApplicationNavigation() {
                       asChild
                       className={clsx(
                         navigationMenuTriggerStyle(),
-                        "font-normal capitalize hover:bg-transparent hover:border-b hover:border-accent focus:bg-transparent focus:border-b focus:border-accent  rounded-none"
+                        "font-normal capitalize hover:bg-transparent hover:border-b hover:border-accent focus:bg-transparent focus:border-b focus:border-accent rounded-none"
                       )}
                     >
                       <Link href={link.url}>{link.name}</Link>
@@ -115,12 +111,23 @@ export default function ApplicationNavigation() {
         </div>
 
         <div className="flex gap-2 max-md:hidden">
-          <ActionButton className="w-25 h-8 bg-[linear-gradient(0deg,#E1FF01,#E1FF01)] text-lg">
-            Sign In
-          </ActionButton>
-          <ActionButton className="w-25 h-8 !bg-[#010101] text-white text-lg">
-            Sign Up
-          </ActionButton>
+          <Button
+            size="lg"
+            className="px-4 font-heading text-md font-semibold bg-[#E1FF01]"
+          >
+            <Link href="https://forms.gle/wfpni6YssPRsUZCu6" target="_blank">
+              Join Waitlist
+            </Link>
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="px-4 font-heading text-md font-semibold"
+          >
+            <Link href="https://calendly.com/benjichimex/30min" target="_blank">
+              Schedule Demo
+            </Link>
+          </Button>
         </div>
 
         <div className="md:hidden space-x-2">
@@ -128,14 +135,18 @@ export default function ApplicationNavigation() {
             size="sm"
             className="px-4 font-heading font-semibold bg-[#E1FF01]"
           >
-            Sign In
+            <Link href="https://forms.gle/wfpni6YssPRsUZCu6" target="_blank">
+              Join Waitlist
+            </Link>
           </Button>
           <Button
             variant="outline"
             size="sm"
             className="px-4 font-heading border-foreground font-semibold"
           >
-            Sign Up
+            <Link href="https://calendly.com/benjichimex/30min" target="_blank">
+              Schedule Demo
+            </Link>
           </Button>
         </div>
       </div>

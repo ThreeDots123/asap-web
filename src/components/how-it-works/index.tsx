@@ -3,11 +3,11 @@ import Step, { individualSteps } from "./steps";
 
 export default function HowitWorks() {
   return (
-    <section>
+    <section id="about">
       <div className="layout-container py-22">
         <div className="max-w-[960px] mx-auto">
           <h5 className="text-sm text-muted-foreground uppercase font-medium max-md:text-center">
-            Easy and Quick
+            The Journey to Going Live with ASAP
           </h5>
 
           <div className="flex max-md:flex-col justify-between mt-4">

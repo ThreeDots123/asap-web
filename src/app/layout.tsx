@@ -111,6 +111,12 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${grotesque.variable} ${editorsNote.variable}`}
     >
+      <head>
+        <meta property="og:title" content="ASAP - Bridge Between Crypto and Everyday Money" />
+        <meta property="og:description" content="Empower your business with crypto payments and manage your crypto like everyday money. Join ASAP today." />
+        <meta property="og:url" content="https://asapcrypto.xyz/" />
+        <meta property="og:image" content="https://asapcrypto.xyz/open-graph-seo.png" />
+      </head>
       <body>{children}</body>
     </html>
   );

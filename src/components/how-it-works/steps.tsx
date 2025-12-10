@@ -1,30 +1,30 @@
-import { CreditCardIcon, PhoneIcon, UsersIcon, WalletIcon } from "lucide-react";
+import { Calendar1, ClipboardList, RadioTower, Workflow } from "lucide-react";
 import { ReactNode } from "react";
 
 export const individualSteps = [
   {
-    heading: "Get started quickly",
-    desc: "You can register and get running very quickly using your phone number only.",
+    heading: "Join the Gateway Program",
+    desc: "Fill out our waitlist form to get exclusive access, personalized onboarding and priority access to our products.",
     bgColor: "#bad30a",
-    Icon: () => <PhoneIcon size={15} className="text-white" />,
+    Icon: () => <ClipboardList size={15} className="text-white" />,
   },
   {
-    heading: "Use your wallet easily",
-    desc: "Send, spend, and trade crypto as simply as using your everyday banking app.",
+    heading: "Strategy Session and Demo",
+    desc: "Schedule a meeting with the onboarding team to get a demo of our products, walkthrough your specific use case and have all technical and compliance questions answered.",
     bgColor: "#3A82F6",
-    Icon: () => <WalletIcon size={15} className="text-white" />,
+    Icon: () => <Calendar1 size={15} className="text-white" />,
   },
   {
-    heading: "Trade with P2P",
-    desc: "Using the P2P section, choose whether you want to buy or sell your coins, and complete your trade directly with us.",
+    heading: "Seamless Integration",
+    desc: "Receive your onboarding package with hands-on technical support, test environment, and pre-launch checklist; depending on the product this may take between 1 hour to 2 days.",
     bgColor: "#F97316",
-    Icon: () => <UsersIcon size={15} className="text-white" />,
+    Icon: () => <Workflow size={15} className="text-white" />,
   },
   {
-    heading: "How to spend crypto like cash",
-    desc: "Through your dedicated wallet or by connecting an external wallet, you can choose a fiat payout option to use your crypto for everyday transactions.",
+    heading: "Go Live and Scale",
+    desc: "Complete final compliance verification, switch to live mode, first settlement within 24 hours, dedicated account manager, and growth resources.",
     bgColor: "#16A34A",
-    Icon: () => <CreditCardIcon size={15} className="text-white" />,
+    Icon: () => <RadioTower size={15} className="text-white" />,
   },
 ];
 
