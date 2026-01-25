@@ -36,7 +36,7 @@ export default function WhatsAppBenfits() {
                 variant="outline"
                 className="md:text-xl text-base font-bold border-black border-2 max-md:p-5 max-md:hover:p-5.5 p-6 hover:bg-transparent rounded-lg hover:p-6.5 cursor-pointer mt-5"
               >
-                <Link href="https://wa.me/message/C4RZJD25AQBCB1" target="_blank">Pay with ASAP</Link>
+                <Link href="https://wa.me/message/U6UXP7R6O2KEC1" target="_blank">Pay with ASAP</Link>
               </Button>
             </div>
           </div>

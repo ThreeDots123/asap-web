@@ -82,17 +82,17 @@ export default function PoSBenefits() {
         <div className="sm:flex items-center gap-3">
           {/* <Link href="https://merchant.asapcrypto.xyz" className="block"> */}
             <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer" onClick={() => toast('Coming Soon!', {icon: '⌛️'})}>
-              Get the ASAP POS Machine
+              Order the ASAP POS Machine
               <ArrowRight />
             </Button>
           {/* </Link> */}
 
-          {/* <Link href="/app-release.apk" className="block"> */}
-            <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer" onClick={() => toast('Coming Soon!', {icon: '⌛️'})}>
-              Download the Machine POS App
+          <Link href="https://play.google.com/store/apps/details?id=com.asap.business" target="_blank" className="block">
+            <Button className="flex gap-2 text-xs bg-primary-light mt-5 cursor-pointer">
+              Download the Mobile POS App
               <ArrowDown />
             </Button>
-          {/* </Link> */}
+          </Link>
         </div>
       </div>
     </section>
