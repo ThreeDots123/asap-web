@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Darker_Grotesque } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "ASAP - Bridge Between Crypto and Everyday Money",
@@ -112,12 +113,24 @@ export default function RootLayout({
       className={`${inter.variable} ${grotesque.variable} ${editorsNote.variable}`}
     >
       <head>
-        <meta property="og:title" content="ASAP - Bridge Between Crypto and Everyday Money" />
-        <meta property="og:description" content="Empower your business with crypto payments and manage your crypto like everyday money. Join ASAP today." />
+        <meta
+          property="og:title"
+          content="ASAP - Bridge Between Crypto and Everyday Money"
+        />
+        <meta
+          property="og:description"
+          content="Empower your business with crypto payments and manage your crypto like everyday money. Join ASAP today."
+        />
         <meta property="og:url" content="https://asapcrypto.xyz/" />
-        <meta property="og:image" content="https://asapcrypto.xyz/open-graph-seo.png" />
+        <meta
+          property="og:image"
+          content="https://asapcrypto.xyz/open-graph-seo.png"
+        />
       </head>
-      <body>{children}</body>
+      <body>
+        <Toaster position="top-right" />
+        {children}
+      </body>
     </html>
   );
 }
