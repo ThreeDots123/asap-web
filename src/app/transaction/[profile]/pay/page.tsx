@@ -12,6 +12,8 @@ export default async function PayMerchantPage({
   const { profile } = await params;
   const result = await validateProfileAction(decodeURIComponent(profile));
 
+  console.log(result);
+
   if (!result.success) {
     return <InvalidPayUrl />;
   }
